@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Validation Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #ff7eb3, #65d6ce, #ffd166);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 380px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+        }
+
+        .editable {
+            background: #f1f1f1;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 15px;
+            outline: none;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .editable:focus {
+            border-color: #ff7eb3;
+            background: #fff;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #65d6ce;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4bb5ad;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Validation Form</h2>
+
+    <input type="text" id="name" class="editable" placeholder="Enter your name">
+    <div id="nameError" class="error"></div>
+
+    <input type="email" id="email" class="editable" placeholder="Enter your email">
+    <div id="emailError" class="error"></div>
+
+    <button onclick="validateForm()">Submit</button>
+</div>
+
+<script>
+    function validateForm() {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+
+        nameError.innerHTML = "";
+        emailError.innerHTML = "";
+
+        let valid = true;
+
+        if (name === "") {
+            nameError.innerHTML = "Name is required";
+            valid = false;
+        }
+
+        if (email === "") {
+            emailError.innerHTML = "Email is required";
+            valid = false;
+        } else if (!email.includes("@")) {
+            emailError.innerHTML = "Enter a valid email";
+            valid = false;
+        }
+
+        if (valid) {
+            alert("Form submitted successfully!");
+        }
+    }
+</script>
+
+</body>
+</html>

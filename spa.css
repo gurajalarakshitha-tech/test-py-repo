@@ -1,0 +1,122 @@
+html{
+
+    scroll-behavior:smooth;
+    
+ }
+    
+    body{
+    
+    margin: 0;
+    
+    padding: 0;
+    
+    font-family: cursive;
+    
+    }
+    
+    nav{
+    
+    width:100%;
+    
+    background-color: rgb(59, 36, 39);
+    
+    overflow: hidden;
+    
+    position: fixed;
+    top:0;
+    
+    }
+    ul{
+    
+        padding: 0;
+        
+        margin: 0;
+        
+        list-style:none;
+    
+        
+        }
+        
+        li{
+        
+        float:left;
+        
+        }
+        a{
+            padding: 20px;
+            
+            width: 100px;
+            
+            display: block;
+            
+            color: beige;
+            
+            
+            font-weight: bold;
+            
+            }
+            #Section1{
+            
+           height: 750px;
+            
+            background: rgb(238, 148, 88);
+            
+            display: inline-block;
+            
+            width: 100%;
+             
+            }
+             #Section2{
+            
+           height: 750px;
+            
+            background: rgb(76, 200, 241);
+            
+            display: inline-block;
+            
+            width: 100%;
+             
+            }
+             #Section3{
+            
+           height: 750px;
+            
+            background: rgb(244, 107, 107);
+            
+            display: inline-block;
+            
+            width: 100%;
+             
+            }
+            
+
+            #Section4{
+            
+                height: 750px;
+            
+            background: rgb(219, 156, 243);
+            
+            display: inline-block;
+            
+            width: 100%;
+            
+            }
+            
+            #Section5{
+            
+            height: 750px;
+            
+            background: rgb(64, 64, 127);
+            
+            display: inline-block;
+            
+            width: 100%;
+            
+            }
+            h2{
+            margin: 100px;
+            
+            text-align: center;
+            
+            padding: 0;
+            }

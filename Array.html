@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    let marks = [89, 56, 76, 99, 84];
+
+    console.log("Before push:", marks);
+    marks.push(90);
+    console.log("After Push:", marks);
+
+    marks.pop(90);
+    console.log("After Pop:", marks);
+
+    updatedmarks = marks.concat([100, 78, 67]);
+    console.log("After concat:", updatedmarks);
+
+    marks.unshift(80);
+    console.log("After unshift:", marks);
+
+    marks.shift();
+    console.log("After Shift:", marks);
+
+    slicedmarks = marks.slice(1, 4);
+    console.log("After Slice:", slicedmarks);
+
+    marks = [89, 56, 76, 99, 84];
+    marks.splice(2, 1, 100); 
+    console.log("After splice:", marks);
+
+    marks.splice(1, 3); 
+    console.log("After deleting elements with splice:", marks);
+</script>
+</html>
